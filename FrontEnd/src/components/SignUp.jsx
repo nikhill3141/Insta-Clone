@@ -23,7 +23,7 @@ export default function SignUp() {
       e.preventDefault();
       setLoading(true)
       try {
-        const res = await axios.post("http://localhost:8000/api/v1/user/register", input,
+        const res = await axios.post("https://insta-clone-made-by-nik.onrender.com/api/v1/user/register", input,
            {
             headers:{'content-type':'application/json'}, 
             wihtCredentials: true

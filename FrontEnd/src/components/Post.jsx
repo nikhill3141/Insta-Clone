@@ -42,7 +42,7 @@ function Post({ post }) {
     try {
       const action = liked ? "dislike" : "like";
       const res = await axios.get(
-        `http://localhost:8000/api/v1/post/${post._id}/${action}`,
+        `https://insta-clone-made-by-nik.onrender.com/api/v1/post/${post._id}/${action}`,
         { withCredentials: true }
       );
 
@@ -73,7 +73,7 @@ function Post({ post }) {
   const deletePostHandler = async (req, res) => {
     try {
       const res = await axios.delete(
-        `http://localhost:8000/api/v1/post/delete/${post?._id}`,
+        `https://insta-clone-made-by-nik.onrender.com/api/v1/post/delete/${post?._id}`,
         { withCredentials: true }
       );
 
@@ -93,7 +93,7 @@ function Post({ post }) {
   const commentHandler = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:8000/api/v1/post/${post._id}/comment`,
+        `https://insta-clone-made-by-nik.onrender.com/api/v1/post/${post._id}/comment`,
         { text },
         {
           headers: {
@@ -126,7 +126,7 @@ function Post({ post }) {
 
   const handleBookmark = async () => {
     try {
-    const res = await axios.get(`http://localhost:8000/api/v1/post/${post?._id}/bookmark`,{withCredentials:true})
+    const res = await axios.get(`https://insta-clone-made-by-nik.onrender.com/api/v1/post/${post?._id}/bookmark`,{withCredentials:true})
       if(res.data.success){
         toast(res.data.message)
         res.data.type === 'saved' ? setBookmarked(true):setBookmarked(false)
