@@ -1,10 +1,10 @@
 import { User } from "../Models/user.model.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import getDataUri from "../Utils/dataUri.js";
+import getDataUri from "../Utils/datauri.js";
 import cloudinary from "../Utils/cloudinary.js";
 import { Post } from "../Models/post.model.js";
-import cookieParser from "cookie-parser";
+
 
 //signin/register
 export const register = async (req, res) => {
