@@ -1,11 +1,12 @@
 import { setUserProfile } from "@/redux/authSlice";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 
 
 const useGetUserProfile = (userId) => {
-  const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    // const [userProfile, setUserProfile] = useState(null);
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {

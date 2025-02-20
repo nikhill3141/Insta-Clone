@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import useGetUserProfile from "@/hooks/useGetUserProfile";
 import { Heart, MessageCircle } from "lucide-react";
 import { Button } from "./ui/button";
-import useGetAllPost from "@/hooks/useGetAllPost";
+
 
 const Profile = () => {
   const params = useParams();
@@ -70,7 +70,7 @@ const Profile = () => {
               </p>
             </div>
             <div>
-              <p className="">{userProfile.bio}</p>
+              <p className="">{userProfile?.bio}</p>
             </div>
           </div>
         </div>
