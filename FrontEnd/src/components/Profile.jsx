@@ -83,7 +83,7 @@ const Profile = () => {
       </div>
       <div className="grid grid-cols-3 gap-2 ">
         {
-          displaedPost.map((post)=>{
+          displaedPost?.map((post)=>{
             return(
               <div key={post._id} className="cursor-pointer group relative">
                 <img src={post.image} alt="postimg" className="rounded aspect-square object-cover w-full" />
