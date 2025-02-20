@@ -81,7 +81,7 @@ const Profile = () => {
         <span className={`cursor-pointer  ${activeTab === 'reel'? 'font-bold':''}`} onClick={()=>handleActiveTab('reel')}>REELS</span>
         <span className={`cursor-pointer  ${activeTab === 'taged'? 'font-bold':''}`} onClick={()=>handleActiveTab('taged')}>TAGED</span>
       </div>
-      <div className="grid grid-cols-3 gap-2 ">
+      {/* <div className="grid grid-cols-3 gap-2 ">
         {
           displaedPost.map((post)=>{
             return(
@@ -97,7 +97,7 @@ const Profile = () => {
             )
           })
         }
-      </div>
+      </div> */}
       
     </div>
   );
